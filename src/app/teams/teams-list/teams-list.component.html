@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-4">
+        <div class="list-group">
+            <a *ngFor="let team of iplTeams" href="#" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img [src]="team.logoPath" width="60px;" height="60px;" alt="team.code">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <h5>{{team.code}}</h5>
+                        </div>
+                        <div class="row">
+                            {{team.name}}
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+            <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+            <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+            <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+        </div>
+    </div>
+</div>
