@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PlayerService } from 'src/app/players/player.service';
+import { CSK_List } from '../models/csk-list.model';
 import { Team } from '../team.model';
 import { iplTeamsList } from './teams-list.model';
 
@@ -9,12 +11,17 @@ import { iplTeamsList } from './teams-list.model';
 })
 export class TeamsListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private playerService: PlayerService) { }
 
   iplTeams : Team[] = [];
 
   ngOnInit(): void {
     this.iplTeams = iplTeamsList;
+  }
+
+  displayTeamList(teamCode: string){
+      console.info('Team: '+teamCode);
+      this.playerService.display(teamCode);
   }
 
 }
